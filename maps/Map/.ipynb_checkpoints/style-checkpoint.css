@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html, body{
+    min-height: 100%
+}
+
+body {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+/*     color: #FFFFFF; */
+    margin:    0 auto;
+    max-width: 900px;
+}
+
+svg{
+    background-color: #EEEEEE;
+    color: #EEEEEE;
+    /*box-shadow: 0px 3px 15px rgba(0,0,0,0.2); */
+    /*border-radius: 5px; */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#canvas{
+    min-height: 600px;
+    min-width: 950px;
+}
+
+
+.tract:hover{
+    fill: yellow
+}
+
+
+g{
+    color: #EEEEEE
+}
+
+#tooltip{
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    margin-top: 2px;
+    color: #444444;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+#legend{
+    color: rgb(56, 58, 74);
+    font-size: 18px;
+    text-align: center;
+    min-height: 150px;
+    max-width: 180px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+#title{
+    font-size: 28px;
+    color: #444444;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#description a{
+/*     text-decoration: none; */
+/*     color: #444444; */
+    text-align: center;
+}
+#description a:hover{
+/*     text-decoration: none; */
+    color: blue;
+    text-align: center;
+}
+
+#backdescription a{
+    text-decoration: none;
+    color: #444444;
+    text-align: center;
+}
+#backdescription a:hover{
+/*     text-decoration: none; */
+    color: blue;
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #EEEEEE;
+}
+
+#rightSide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Arial';
+}
+
+#main {
+  width: 1000px;
+  display: flex;
+  padding-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counties {
+  fill: none;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+div.tooltip {
+  position: absolute;
+  padding: 10px;
+  font: 12px Arial;
+  background: rgba(255, 255, 204, 0.9);
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
+  border: 0px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+#title {
+  font-size: 3.5rem;
+}
+
+#description {
+  text-align: center;
+}
+
+#source {
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+ */

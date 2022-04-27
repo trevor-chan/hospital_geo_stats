@@ -1,0 +1,143 @@
+{
+ "links": [
+  {
+   "source": 0,
+   "target": 3,
+   "value": 0.47642648797154014
+  },
+  {
+   "source": 0,
+   "target": 2,
+   "value": 0.31036357012267535
+  },
+  {
+   "source": 0,
+   "target": 5,
+   "value": 0.5127905042581578
+  },
+  {
+   "source": 0,
+   "target": 7,
+   "value": 0.4136039767023782
+  },
+  {
+   "source": 0,
+   "target": 6,
+   "value": 0.30594059412364455
+  },
+  {
+   "source": 3,
+   "target": 1,
+   "value": -0.42870170173700706
+  },
+  {
+   "source": 3,
+   "target": 2,
+   "value": 0.7245195807761154
+  },
+  {
+   "source": 3,
+   "target": 5,
+   "value": 0.5834400253718789
+  },
+  {
+   "source": 3,
+   "target": 7,
+   "value": 0.6332642287326535
+  },
+  {
+   "source": 3,
+   "target": 6,
+   "value": 0.6433787206762054
+  },
+  {
+   "source": 1,
+   "target": 2,
+   "value": -0.6590182113524987
+  },
+  {
+   "source": 1,
+   "target": 6,
+   "value": -0.35455236661302786
+  },
+  {
+   "source": 2,
+   "target": 5,
+   "value": 0.39007004246583
+  },
+  {
+   "source": 2,
+   "target": 7,
+   "value": 0.3359313806176404
+  },
+  {
+   "source": 2,
+   "target": 6,
+   "value": 0.4298991688489027
+  },
+  {
+   "source": 4,
+   "target": 5,
+   "value": -0.6727893002887966
+  },
+  {
+   "source": 4,
+   "target": 7,
+   "value": -0.7621736607547118
+  },
+  {
+   "source": 4,
+   "target": 6,
+   "value": -0.6407188747719585
+  },
+  {
+   "source": 5,
+   "target": 7,
+   "value": 0.8664172563741731
+  },
+  {
+   "source": 5,
+   "target": 6,
+   "value": 0.6335920890609554
+  },
+  {
+   "source": 7,
+   "target": 6,
+   "value": 0.4234183710982573
+  }
+ ],
+ "nodes": [
+  {
+   "group": "0",
+   "name": "avg_medicare_payment"
+  },
+  {
+   "group": "1",
+   "name": "emergency_wait_time"
+  },
+  {
+   "group": "2",
+   "name": "imaging_efficiency"
+  },
+  {
+   "group": "3",
+   "name": "infection_ratio"
+  },
+  {
+   "group": "4",
+   "name": "mortality_30"
+  },
+  {
+   "group": "5",
+   "name": "revenue"
+  },
+  {
+   "group": "6",
+   "name": "revenue_per_discharge"
+  },
+  {
+   "group": "7",
+   "name": "total_discharges"
+  }
+ ]
+}

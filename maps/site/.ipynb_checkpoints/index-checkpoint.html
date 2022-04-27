@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" integrity="sha256-tHoAPGoNdhIR28YHl9DWLzeRfdwigkH7OCBXMrHXhoM=" crossorigin="anonymous"></script>
+    <title>Choropleth Map</title>
+</head>
+<body>
+    <div id="main">
+  <h1 id="title">Philadelphia County</h1>
+  <select id="datatype">
+    <option value="1" selected="selected">Total Insurance</option>
+    <option value="2">Public Insurance</option>
+    <option value="3">Private Insurance</option>
+    <option value="4">Total Population</option>
+    <option value="5">White (Race)</option>
+    <option value="6">Black or African American (Race)</option>
+    <option value="7">American Indian and Alaska Native (Race)</option>
+    <option value="8">Asian (Race)</option>
+    <option value="9">Native Hawaiian and Other Pacific Islander (Race)</option>
+    <option value="10">Median income</option>
+    <option value="11">Education: Bachelor's degree or higher</option>
+  </select>
+  <select id="hospstat">
+    <option value="1" selected="selected">Infection Ratio</option>
+    <option value="2">Emergency Department Waiting Time</option>
+    <option value="3">Outpatient Imaging Score</option>
+      
+    <option value="4">30 Day Mortality</option>
+    <option value="5">Average Medicare Payment</option>
+    <option value="6">Hospital Patient Revenue</option>
+    <option value="7">Total Inpatient Discharges</option>
+    <option value="8">Revenue per Discharge</option>
+  </select>
+  <button onclick="getOption()"> Update </button>
+        
+  <div id="description">
+      Selected statistics on hospital performance, hospital finances, and demographics by locale, compiled from 3 sources.
+  </div>
+        
+  <svg id="canvas" width="960" height="600"></svg>
+  <div id='tooltip'></div>
+  <br>
+  <br>
+  <br>
+  <div id="description">
+    Noninstitutionalized civilian population statistics by US Census Tracts (2015-2020) -- Source:  <a href='https://data.census.gov/cedsci/table?q=health%20insurance&t=Health&g=0500000US42101%241400000&y=2020&tid=ACSST5Y2020.S2701'> US Census Bureau</a></div>
+  <div id="description">
+    Hospital performance statistics (2020) -- Source:  <a href='https://data.cms.gov/provider-data/topics/hospitals'> US Centers for Medicare and Medicaid Services</a></div>
+  <div id="description">
+    Hospital revenue statistics (2020) -- Source:  <a href='https://www.ahd.com/'> American Hospital Directory</a></div>
+        
+  <br>
+        
+<h1>Variable Correlation Graphs</h1>
+    <div id="largedescription"><h2><a href="hospital_data_fdg.html">Hospital Variable Correlation Graph</a></h2></div>
+    <div id="largedescription"><h2><a href="census_data_fdg.html">Census Variable Correlation Graph</a></h2></div>
+
+<h1>Variable Definitions</h1>
+        
+<h2>Infection Ratio</h2>      
+A hospital’s care-associated associated infection score measures how often patients contract certain infections while in the hospital. These infections include: central line-associated bloodstream infections, catheter-associated urinary tract infections, surgical site infections from colon surgery or abdominal hysterectomy, methicillin-resistant Staphylococcus Aureus blood laboratory-identified events, and Clostridium difficile laboratory-identified events. A hospital’s standardized infection ratio (calculated by the CDC) takes into account the number of patients with an existing infection, laboratory methods, patient age, and classification of patient health, among others, and it applies to all patients. Hospitals’ SIRs are compared to the national benchmark to determine if hospitals’ performance on these measures is <i>better than the national benchmark (lower), no different than the national benchmark, or worse than the national benchmark (higher).</i> <a href='https://data.cms.gov/provider-data/topics/hospitals'> US Centers for Medicare and Medicaid Services</a>
+        
+<h2>Emergency Department Waiting Time</h2>      
+Average time patients spent in the emergency department before being sent home. *This includes both waiting time and treatment time. <a href='https://data.cms.gov/provider-data/topics/hospitals'> US Centers for Medicare and Medicaid Services</a>
+        
+<h2>Outpatient Imaging Score</h2>
+The measures on the use of medical imaging show how often a hospital provides specific imaging tests for Medicare beneficiaries under circumstances where they may not be medically appropriate. <i>Lower percentages suggest more efficient use of medical imaging.</i> The purpose of reporting these measures is to reduce unnecessary exposure to contrast materials and/or radiation, to ensure adherence to evidence-based medicine and practice guidelines, and to prevent wasteful use of Medicare resources. The measures only apply to Medicare patients treated in hospital outpatient departments. Imaging score is calculated based on three reported practices: outpatients with low back pain who had an MRI without trying recommended treatments first, such as physical therapy, outpatient CT scans of the abdomen that were “combination” (double) scans, and outpatients who got cardiac imaging stress tests before low-risk outpatient surgery. <a href='https://data.cms.gov/provider-data/topics/hospitals'> US Centers for Medicare and Medicaid Services</a>
+    
+<h2>30 Day Mortality</h2>
+The 30-day death measures are estimates of deaths within 30-days of a hospital admission from any cause related to medical conditions, including heart attack, heart failure, pneumonia, chronic obstructive pulmonary disease, and stroke; as well as surgical procedures, including coronary artery bypass graft. Hospitals’ rates are compared to the national rate to determine if hospitals’ performance on these measures is <i>better than the national rate (lower), no different than the national rate, or worse than the national rate (higher).</i> <a href='https://data.cms.gov/provider-data/topics/hospitals'> US Centers for Medicare and Medicaid Services</a>
+
+<h2>Average Medicare Payment</h2>   
+Medicare Spending Per Beneficiary assesses Medicare payments for services provided to a Medicare beneficiary during a spending-per-beneficiary episode. The payments included in this measure are price-standardized and risk-adjusted. Average medicare payment considers only payment measures for heart attack, heart failure, pneumonia, and hip/knee replacement, and include the payments made for Medicare beneficiaries who are 65 years and older. The measures add up payments made for care and supplies starting the day the patient enters the hospital and for the next 30 days or 90 days for hip/knee replacement. These are meant to reflect differences in the services and supplies provided to patients. <a href='https://data.cms.gov/provider-data/topics/hospitals'> US Centers for Medicare and Medicaid Services</a>
+        
+<h2>Hospital Patient Revenue</h2>     
+Total patient revenue earned during the 2020 fiscal year. Here, patient revenue does not account for additional non-patient revenue earned, but patient revenue is typically the large majority (>90%) of gross revenue. <a href='https://www.ahd.com/'> American Hospital Directory</a>
+
+<h2>Total Inpatient Discharges</h2>
+Total inpatient discharges during the 2020 fiscal year. <a href='https://www.ahd.com/'> American Hospital Directory</a>
+
+<h2>Total Inpatient Discharges</h2>
+Total inpatient discharges during the 2020 fiscal year. <a href='https://www.ahd.com/'> American Hospital Directory</a>
+
+<br>
+<br>
+<br>
+        
+</div>
+    
+<div id="backdescription">
+    <a href='https://trevor-chan.github.io/'> Trevor Chan, April 2022, tjchan@seas.upenn.edu</a></div>
+    
+</body>
+<script defer src='scripts/script_test.js'></script>
+<!-- <script defer src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script> -->
+</html>

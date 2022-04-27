@@ -1,0 +1,185 @@
+{
+ "links": [
+  {
+   "source": 8,
+   "target": 9,
+   "value": 0.5499828056893603
+  },
+  {
+   "source": 8,
+   "target": 1,
+   "value": 0.35314588398269164
+  },
+  {
+   "source": 8,
+   "target": 3,
+   "value": -0.44741732523253913
+  },
+  {
+   "source": 8,
+   "target": 7,
+   "value": 0.35800608224567837
+  },
+  {
+   "source": 8,
+   "target": 6,
+   "value": 0.3970336049069402
+  },
+  {
+   "source": 10,
+   "target": 9,
+   "value": -0.9214108481622453
+  },
+  {
+   "source": 10,
+   "target": 1,
+   "value": -0.7090913476786272
+  },
+  {
+   "source": 10,
+   "target": 2,
+   "value": 0.5554198007616135
+  },
+  {
+   "source": 10,
+   "target": 3,
+   "value": 0.4271964733760073
+  },
+  {
+   "source": 10,
+   "target": 4,
+   "value": -0.3085657071950135
+  },
+  {
+   "source": 10,
+   "target": 7,
+   "value": -0.721868374430488
+  },
+  {
+   "source": 10,
+   "target": 6,
+   "value": -0.7696137582568338
+  },
+  {
+   "source": 9,
+   "target": 1,
+   "value": 0.7283655714110319
+  },
+  {
+   "source": 9,
+   "target": 2,
+   "value": -0.48328967395665007
+  },
+  {
+   "source": 9,
+   "target": 3,
+   "value": -0.5617508005239384
+  },
+  {
+   "source": 9,
+   "target": 7,
+   "value": 0.7537653817460637
+  },
+  {
+   "source": 9,
+   "target": 6,
+   "value": 0.7818639433471696
+  },
+  {
+   "source": 1,
+   "target": 2,
+   "value": -0.8459352390946084
+  },
+  {
+   "source": 1,
+   "target": 3,
+   "value": -0.3115680402889766
+  },
+  {
+   "source": 1,
+   "target": 7,
+   "value": 0.7149660876442535
+  },
+  {
+   "source": 1,
+   "target": 6,
+   "value": 0.663633764169568
+  },
+  {
+   "source": 2,
+   "target": 4,
+   "value": -0.42758883967774
+  },
+  {
+   "source": 2,
+   "target": 7,
+   "value": -0.5524431706309402
+  },
+  {
+   "source": 2,
+   "target": 6,
+   "value": -0.4688050872539366
+  },
+  {
+   "source": 3,
+   "target": 7,
+   "value": -0.35466068029377684
+  },
+  {
+   "source": 3,
+   "target": 6,
+   "value": -0.34180000301673713
+  },
+  {
+   "source": 7,
+   "target": 6,
+   "value": 0.7674584397982988
+  }
+ ],
+ "nodes": [
+  {
+   "group": "1",
+   "name": "Total Population"
+  },
+  {
+   "group": "1",
+   "name": "% White (race)"
+  },
+  {
+   "group": "1",
+   "name": "% Black or AA (race)"
+  },
+  {
+   "group": "1",
+   "name": "% American Indian or Alaskan (race)"
+  },
+  {
+   "group": "1",
+   "name": "% Asian (race)"
+  },
+  {
+   "group": "1",
+   "name": "% Hawaiian or PI (race)"
+  },
+  {
+   "group": "3",
+   "name": "Education (% BA,BS)"
+  },
+  {
+   "group": "2",
+   "name": "Median Income"
+  },
+  {
+   "group": "0",
+   "name": "Health Insurance (Total)"
+  },
+  {
+   "group": "0",
+   "name": "Private Health Insurance"
+  },
+  {
+   "group": "0",
+   "name": "Public Health Insurance"
+  }
+ ]
+}

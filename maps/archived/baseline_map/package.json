@@ -1,0 +1,14 @@
+{
+  "name": "@floledermann/drawing-maps-from-geodata-in-d3",
+  "main": "a60d258e71e4828b@729.js",
+  "version": "729.0.0",
+  "homepage": "https://observablehq.com/@floledermann/drawing-maps-from-geodata-in-d3",
+  "author": {
+    "name": "Florian Ledermann",
+    "url": "https://observablehq.com/@floledermann"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
